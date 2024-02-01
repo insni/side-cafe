@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.AdminController">
+  <tabs>
+     <!--  <Tab text="테이블 레이아웃">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab> -->
+      <Tab fx:id="tab_coffe" text="커피">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button fx:id="btnAddCoffe" layoutX="628.0" mnemonicParsing="false" onAction="#setMenu" prefHeight="29.0" prefWidth="68.0" text="추가" />
+                  <Button fx:id="btnUpdateCoffe" layoutX="696.0" mnemonicParsing="false" onAction="#updateMenu" prefHeight="29.0" prefWidth="68.0" text="수정" />
+                  <Button fx:id="btnDeleteCoffe" layoutX="764.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" text="삭제" />
+                  <Button layoutX="832.0" mnemonicParsing="false" onAction="#menuRefresh" prefHeight="29.0" prefWidth="68.0" text="갱신" />
+                  <TableView fx:id="menulist" prefHeight="433.0" prefWidth="427.0">
+                     <columns>
+                        <TableColumn fx:id="idntfNmbrTable" resizable="false" text="상품번호" />
+                        <TableColumn fx:id="menunameTable" prefWidth="185.0" resizable="false" text="메뉴 이름" />
+                        <TableColumn fx:id="priceTable" resizable="false" text="가격" />
+                        <TableColumn fx:id="countTable" resizable="false" text="남은수량" />
+                     </columns>
+                  </TableView>
+                  <ImageView fx:id="menuimage" fitHeight="401.0" fitWidth="473.0" layoutX="427.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tab_food" text="푸드">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button fx:id="btnAddFood" layoutX="628.0" mnemonicParsing="false" onAction="#setMenu" prefHeight="29.0" prefWidth="68.0" text="추가" />
+                  <Button fx:id="btnUpdateFood" layoutX="696.0" mnemonicParsing="false" onAction="#updateMenu" prefHeight="29.0" prefWidth="68.0" text="수정" />
+                  <Button fx:id="btnDeleteFood" layoutX="764.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" text="삭제" />
+                  <Button layoutX="832.0" mnemonicParsing="false" onAction="#menuRefresh" prefHeight="29.0" prefWidth="68.0" text="갱신" />
+                  <TableView fx:id="menulist2" prefHeight="432.0" prefWidth="427.0">
+                     <columns>
+                        <TableColumn fx:id="idntfNmbrTable2" resizable="false" text="상품번호" />
+                        <TableColumn fx:id="menunameTable2" prefWidth="185.0" resizable="false" text="메뉴 이름" />
+                        <TableColumn fx:id="priceTable2" resizable="false" text="가격" />
+                        <TableColumn fx:id="countTable2" resizable="false" text="남은수량" />
+                     </columns>
+                  </TableView>
+                  <ImageView fx:id="menuimage2" fitHeight="402.0" fitWidth="473.0" layoutX="427.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="tab_drink" text="음료">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button fx:id="btnAddDrink" layoutX="628.0" mnemonicParsing="false" onAction="#setMenu" prefHeight="29.0" prefWidth="68.0" text="추가" />
+                  <Button fx:id="btnUpdateDrink" layoutX="696.0" mnemonicParsing="false" onAction="#updateMenu" prefHeight="29.0" prefWidth="68.0" text="수정" />
+                  <Button fx:id="btnDeleteDrink" layoutX="764.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="68.0" text="삭제" />
+                  <Button layoutX="832.0" mnemonicParsing="false" onAction="#menuRefresh" prefHeight="29.0" prefWidth="68.0" text="갱신" />
+                  <TableView fx:id="menulist3" prefHeight="432.0" prefWidth="427.0">
+                     <columns>
+                        <TableColumn fx:id="idntfNmbrTable3" resizable="false" text="상품번호" />
+                        <TableColumn fx:id="menunameTable3" prefWidth="185.0" resizable="false" text="메뉴 이름" />
+                        <TableColumn fx:id="priceTable3" resizable="false" text="가격" />
+                        <TableColumn fx:id="countTable3" resizable="false" text="남은수량" />
+                     </columns>
+                  </TableView>
+                  <ImageView fx:id="menuimage3" fitHeight="405.0" fitWidth="471.0" layoutX="427.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   <!--  <Tab text="예약 내역 조회">
+         <content>
+            <AnchorPane prefHeight="300.0" prefWidth="700.0">
+               <children>
+                  <TableView fx:id="reserveTableView" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0">
+                     <columns>
+                        <TableColumn fx:id="dateResTable" prefWidth="70.0" text="날짜" />
+                        <TableColumn fx:id="idResTable" prefWidth="70.0" text="아이디" />
+                        <TableColumn fx:id="nameResTable" prefWidth="70.0" text="이름" />
+                        <TableColumn fx:id="tableResTable" prefWidth="40.0" text="테이블" />
+                        <TableColumn fx:id="reserveTimeResTable" prefWidth="70.0" text="결제시간" />
+                        <TableColumn fx:id="startTimeResTable" prefWidth="70.0" text="시작시간" />
+                        <TableColumn fx:id="getTimeResTable" prefWidth="70.0" text="이용시간" />
+                        <TableColumn fx:id="orderMenuResTable" prefWidth="170.0" text="주문내역" />
+                        <TableColumn fx:id="priceResTable" prefWidth="70.0" text="금액" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="searchReserve" layoutX="598.0" mnemonicParsing="false" onAction="#reserveList" prefHeight="30.0" prefWidth="102.0" text="모든 예약 조회" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+    <Tab text="회원 정보 관리">
+         <content>
+            <AnchorPane prefHeight="300.0" prefWidth="700.0">
+               <children>
+                  <TableView fx:id="table" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0">
+                     <columns>
+                        <TableColumn fx:id="idTable" prefWidth="120.0" text="아이디" />
+                        <TableColumn fx:id="nameTable" prefWidth="120.0" text="이름" />
+                        <TableColumn fx:id="emailTable" prefWidth="220.0" text="메일주소" />
+                        <TableColumn fx:id="phoneTable" prefWidth="120.0" text="휴대폰 번호" />
+                        <TableColumn fx:id="reservDate" prefWidth="120.0" text="가입일" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="search" layoutX="598.0" mnemonicParsing="false" onAction="#userList" prefHeight="30.0" prefWidth="102.0" text="모든 회원 조회" />
+                  <Button fx:id="searchOne" layoutX="530.0" mnemonicParsing="false" onAction="#userOneList" prefHeight="30.0" text="회원 검색" />
+                  <TextField fx:id="searchId" layoutX="392.0" prefHeight="30.0" />
+               </children>
+            </AnchorPane>
+         </content></Tab> -->
+  </tabs>
+</TabPane>

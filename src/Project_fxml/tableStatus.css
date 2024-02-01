@@ -1,0 +1,7 @@
+*{
+	-fx-background-color:whitesmoke;
+	-fx-font-family	:Malgun Gothic;
+}
+Label{
+	-fx-font-size:12;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.ManagerController">
+   <children>
+      <ImageView fitHeight="702.0" fitWidth="509.0" layoutX="-7.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../images/member.jpg" />
+               </image>
+      </ImageView>
+   
+   
+	
+      <VBox alignment="CENTER" layoutX="179.0" layoutY="284.0" spacing="5.0">
+         <children>
+            <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#manageMenus" style="-fx-background-color: none;" text="메뉴관리" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnMemberCheck" mnemonicParsing="false" onAction="#checkMember" style="-fx-background-color: none;" text="회원찾기" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRsrvtStatus" mnemonicParsing="false" onAction="#viewRsrvtStatus" style="-fx-background-color: none;" text="예약내역" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRsrvtTableStatus" mnemonicParsing="false" onAction="#viewRsrvtTableStatus" style="-fx-background-color: none;" text="예약상태" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

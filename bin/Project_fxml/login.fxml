@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.LoginController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+      	<image>
+      		 <Image url="@../images/login.jpg" />
+      	</image>
+      </ImageView>
+      <GridPane fx:id="gridPane" alignment="CENTER" layoutX="132.0" layoutY="207.0">
+         <children>
+            <TextField fx:id="input_id" alignment="CENTER" blendMode="DARKEN" prefHeight="50.0" prefWidth="200.0" style="-fx-text-fill: black;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic" size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow color="#00000027" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="input_pw" alignment="CENTER" blendMode="DARKEN" prefHeight="50.0" prefWidth="200.0" style="-fx-text-fill: black;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic" size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="35.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow color="#00000027" height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+            </PasswordField>
+            <Button fx:id="logBtn" mnemonicParsing="false" onAction="#login" style="-fx-background-color: none;" text="로그인" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" right="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#open_join_window" style="-fx-background-color: none;" text="회원가입" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="label_login" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="173.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="173.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

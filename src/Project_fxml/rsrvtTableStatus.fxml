@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@tableStatus.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.TableController">
+	<stylesheets>
+		
+	</stylesheets>
+   <children>
+      <HBox fx:id="top" alignment="CENTER" spacing="100.0">
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="50.0" />
+         </VBox.margin>
+         <children>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="1">
+                     <font>
+                        <Font size="7.0" />
+                     </font></Label>
+                  <Label fx:id="tlStatus" />
+                  <Circle fx:id="topLeft" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect></Circle>
+                  <VBox fx:id="tlLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tlRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tlRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tlRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="2">
+                     <font>
+                        <Font size="7.0" />
+                     </font></Label>
+                  <Label fx:id="tclStatus" />
+                  <Circle fx:id="topCenterLeft" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect></Circle>
+                  <VBox fx:id="tclLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tclRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tclRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tclRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="3">
+                     <font>
+                        <Font size="7.0" />
+                     </font></Label>
+                  <Label fx:id="tcrStatus" />
+                  <Circle fx:id="topCenterRight" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect></Circle>
+                  <VBox fx:id="tcrLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tcrRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tcrRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tcrRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="4">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="trStatus" />
+                  <Circle fx:id="topRight" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin></Circle>
+                  <VBox fx:id="trLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="trRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="trRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="trRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="center" alignment="CENTER" spacing="210.0">
+         <children>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="5">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clStatus" />
+                  <Circle fx:id="centerLeft" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="clLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="카운터">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin></Label>
+                  <Rectangle fx:id="counter" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="#00000027" strokeType="INSIDE" width="100.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin></Rectangle>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="6">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="crStatus" />
+                  <Circle fx:id="centerRight" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="crLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="crRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="crRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="crRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="bottom" alignment="CENTER" spacing="100.0">
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+               <children>
+                  <Label text="7">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="blStatus" />
+                  <Circle fx:id="bottomLeft" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="blLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="blRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="blRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="blRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="7.0">
+               <children>
+                  <Label text="8">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bclStatus" />
+                  <Circle fx:id="bottomCenterLeft" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="bclLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bclRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bclRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bclRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+               <children>
+                  <Label text="9">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bcrStatus" />
+                  <Circle fx:id="bottomCenterRight" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="bcrLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bcrRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bcrRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bcrRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+               <children>
+                  <Label text="10">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="brStatus" />
+                  <Circle fx:id="bottomRight" blendMode="COLOR_BURN" fill="WHITE" onMouseClicked="#choseSeat" opacity="0.46" radius="60.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.56" radius="9.2225" spread="0.24" width="30.33" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <VBox fx:id="brLblBox" spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="남은시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="brRmnngTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="시작시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="brRsrvtStartTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="50.0" text="종료시간" textAlignment="CENTER">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                              <Label fx:id="brRsrvtEndsTime" alignment="CENTER" prefWidth="50.0">
+                                 <font>
+                                    <Font />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

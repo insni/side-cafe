@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.MenuController">
+	<children>
+      <VBox alignment="CENTER" layoutX="33.0" layoutY="30.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+            		<Label text="카테고리">
+            			<font>
+            				<Font name="Malgun Gothic" size="15.0" />
+            			</font>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+            		</Label>
+            		<ComboBox fx:id="comboAdd" prefHeight="30.0" prefWidth="150.0">
+            			<items>
+            			<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="커피" />
+            			<String fx:value="푸드" />
+            			<String fx:value="음료" />
+            		</FXCollections>				
+            			</items>
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+            		</ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="상품번호">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="idntfNmbrField" alignment="CENTER" prefHeight="30.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+            		<Label text="이름">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </Label>
+            		<TextField fx:id="menuField" alignment="CENTER" prefHeight="30.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+            		<Label text="가격">
+            			<font>
+            				<Font size="15.0" />
+            			</font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+            		</Label>
+            		<TextField fx:id="priceField" alignment="CENTER" prefHeight="30.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="수량">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="countField" alignment="CENTER" prefHeight="30.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+            		<Separator prefHeight="3.0" prefWidth="300.0" />
+                  <Label text="사진">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="photoField" prefHeight="30.0" prefWidth="300.0" />
+                  <Button mnemonicParsing="false" onAction="#fileChoose" text="추가" />
+                  <Separator prefHeight="3.0" prefWidth="300.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+      		<Button fx:id="addMenuBtn" onAction="#insertMenu" prefHeight="23.0" prefWidth="89.0" text="메뉴추가" />
+         </children>
+      </VBox>
+		
+	</children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

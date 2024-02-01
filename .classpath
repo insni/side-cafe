@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/프로젝트_자료/mail-1.4.7.jar"/>
+	<classpathentry kind="lib" path="D:/프로젝트_자료/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="D:/프로젝트_자료/saveImg.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.MemberController">
+   <children>
+      <ImageView fitHeight="702.0" fitWidth="514.0" layoutX="-7.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../images/member.jpg" />
+               </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="183.0" layoutY="256.0">
+         <children>
+            <Button fx:id="btnReservation" mnemonicParsing="false" style="-fx-background-color: none;" text="예약" textFill="#ffffffdd">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnModifing" mnemonicParsing="false" style="-fx-background-color: none;" text="정보수정" textFill="#ffffffdd">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnWithDraw" mnemonicParsing="false" style="-fx-background-color: none;" text="회원탈퇴" textFill="#ffffffdd">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

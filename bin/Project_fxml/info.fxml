@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorpane" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.InfoController">
+	<children>
+      <ImageView fitHeight="900.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/info.jpg" />
+         </image>
+      </ImageView>
+		<GridPane layoutX="50.0" layoutY="25.0" prefHeight="813.0" prefWidth="600.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="140.0" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="460.0" />
+
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+			</rowConstraints>
+         <children>
+            <Label text="아이디" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="input_id" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnOverLapId" mnemonicParsing="false" onAction="#overlap_id_btn" text="중복확인" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Label text="비밀번호" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <Button fx:id="btnOverLapPw" mnemonicParsing="false" onAction="#confirm_pw_btn" text="중복확인" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" text="비밀번호 확인" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="비밀번호 확인" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <Label text="이름" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="input_name" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="input_pw" alignment="CENTER" prefHeight="31.0" prefWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="input_pw_re" alignment="CENTER" prefHeight="30.0" prefWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </PasswordField>
+            <Label text="연락처" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="input_phone" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <Label text="이메일" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <Label text="질문" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <ComboBox fx:id="question_box" prefWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="답변" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="16.0" />
+               </font></Label>
+            <TextField fx:id="input_question" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnJoin" mnemonicParsing="false" onAction="#join" prefWidth="100.0" text="가입" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button mnemonicParsing="false" onAction="#exit" prefWidth="100.0" text="취소" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="200.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="input_email" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="id_label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#confirm_email" text="인증하기" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="id_label" style="-fx-font-size: 15;" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="pw_label" style="-fx-font-size: 15;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="btnModify" mnemonicParsing="false" prefWidth="100.0" text="수정" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font></Button>
+         </children>
+		</GridPane>
+	</children>
+</AnchorPane>

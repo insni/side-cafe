@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project_Controller.OrderController">
+   <children>
+      <VBox>
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="714.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="tab_coffe" text="커피">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <TableView fx:id="menulist" prefHeight="400.0" prefWidth="310.0">
+                                             <columns>
+                                                <TableColumn fx:id="menunameTable" prefWidth="210.0" resizable="false" text="메뉴" />
+                                                <TableColumn fx:id="priceTable" prefWidth="100.0" resizable="false" text="금액" />
+                                             </columns>
+                                          </TableView>
+                                          <ImageView fx:id="menuimage" fitHeight="400.0" fitWidth="509.0" layoutX="311.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tab_food" text="푸드">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="menulist2" prefHeight="400.0" prefWidth="310.0">
+                                             <columns>
+                                                <TableColumn fx:id="menunameTable2" prefWidth="210.0" resizable="false" text="메뉴" />
+                                                <TableColumn fx:id="priceTable2" prefWidth="100.0" resizable="false" text="금액" />
+                                             </columns>
+                                          </TableView>
+                                          <ImageView fx:id="menuimage2" fitHeight="360.0" fitWidth="420.0" layoutX="310.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tab_drink" text="음료">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="821.0">
+                                       <children>
+                                          <TableView fx:id="menulist3" prefHeight="400.0" prefWidth="310.0">
+                                             <columns>
+                                                <TableColumn fx:id="menunameTable3" prefWidth="210.0" resizable="false" text="메뉴" />
+                                                <TableColumn fx:id="priceTable3" prefWidth="100.0" resizable="false" text="금액" />
+                                             </columns>
+                                          </TableView>
+                                          <ImageView fx:id="menuimage3" fitHeight="360.0" fitWidth="420.0" layoutX="310.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <VBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addOrder" text="담 기">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="cancleBtn" mnemonicParsing="false" onAction="#delOrder" text="비우기">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="10.0" />
+      <Separator prefHeight="0.0" />
+      <HBox spacing="80.0">
+         <children>
+            <TableView fx:id="orderlist" prefHeight="400.0" prefWidth="310.0">
+               <columns>
+                  <TableColumn fx:id="ordernameTable" prefWidth="152.0" resizable="false" text="주문내역" />
+                  <TableColumn fx:id="orderpriceTable" prefWidth="99.0" resizable="false" text="금액" />
+                  <TableColumn fx:id="orderquantityTable" prefWidth="59.0" resizable="false" text="수량" />
+               </columns>
+            </TableView>
+            <VBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <AnchorPane prefHeight="0.0" />
+                  <Label text="이용시간" />
+                  <Label fx:id="rsrvtTime">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="예약시간">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="selectTime" prefWidth="150.0" />
+                  <Label text="종료시간">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="rsrvtEndsTime">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label fx:id="total1" alignment="CENTER" text="결제 금액">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="total" alignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <VBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="payBtn" mnemonicParsing="false" onAction="#pay" text="결제하기">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="backBtn" mnemonicParsing="false" onAction="#back" text="뒤로가기">
+                                       <padding>
+                                          <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,11 @@
+*{
+	-fx-font-size:12;
+	-fx-font-family	:Malgun Gothic;
+}
+TextField{
+	-fx-alignment:CENTER;
+	
+}
+Label{
+	-fx-font-weight:bold;
+}
